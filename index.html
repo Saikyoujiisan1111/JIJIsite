@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JIJIのサイト</title>
+    <link rel="stylesheet" href="jijicss.css">
+  </head>
+  <body>
+<div class="backbox" id="tameshi"></div>
+<div class="yokoboxone" id="1"></div>
+<div class="yokoboxtwo" id="2"></div>
+<h1 class="pp" id="3">JIJI</h1>
+<div id="kae"></div>
+
+<div id="kaomoji">´∀｀</div>
+
+<div id="boxu"></div>
+
+<script type="text/javascript">
+document.addEventListener('touchmove', disableScroll, { passive: false });
+  document.getElementById("tameshi").onclick = function() {
+  //alert('なんでやねん');
+//alert(document.getElementById('kae'));
+  document.getElementById('kae').classList.add('animationclass');
+　window.setTimeout(tugiyann, 4100);
+};
+function tugiyann(){
+  //alert('いけてる');
+  document.getElementById('boxu').classList.add('uekarabox');
+  document.getElementById('1').classList.remove('yokoboxone');
+  document.getElementById('2').classList.remove('yokoboxtwo');
+  document.getElementById('3').classList.remove('pp');
+  window.setTimeout(hyouji, 500);
+}
+function hyouji(){
+    document.getElementById('kaomoji').classList.add('pp');
+}
+function disableScroll(event) {
+  event.preventDefault();
+}
+</script>
+</body>
+</html>
